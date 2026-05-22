@@ -1,8 +1,7 @@
 - 👋 Hi, I’m @DurveshMhatre
 - 👀 I’m interested in Computer Technologies and Data Science 
 - 🌱 I’m currently learning Data Science and Backend Technologies
-- 📫 How to reach me Email: durveshdevlopments@gmail.comProfile image
-durveshdevlopments@gmail.com
+- 📫 How to reach me Email: durveshdevlopments@gmail.comProfile
 - 😄 Pronouns: He/Him
 - ⚡ Fun fact: I am a fast learner and have a differnet concepts and ideas
 
