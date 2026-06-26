@@ -17,6 +17,9 @@ jobs:
     name: Jobs to update datas
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       # Snake Animation
       - name: Generate github-contribution-grid-snake.svg
         uses: platane/snk/svg-only@v3
@@ -28,7 +31,7 @@ jobs:
           
       # Push the content of dist directory to the 'output' branch
       - name: Push github-contribution-grid-snake.svg to Output Branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
