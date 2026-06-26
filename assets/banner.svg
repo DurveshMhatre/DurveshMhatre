@@ -1,116 +1,80 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 150" width="100%" height="100%">
   <style>
     @keyframes pulse-1 {
-      0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.4; }
-      50% { transform: translate(40px, -20px) scale(1.1); opacity: 0.6; }
+      0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+      50% { transform: translate(30px, -10px) scale(1.05); opacity: 0.45; }
     }
     @keyframes pulse-2 {
-      0%, 100% { transform: translate(0, 0) scale(1.1); opacity: 0.3; }
-      50% { transform: translate(-30px, 30px) scale(0.9); opacity: 0.5; }
-    }
-    .bg {
-      fill: #090d16;
+      0%, 100% { transform: translate(0, 0) scale(1.05); opacity: 0.2; }
+      50% { transform: translate(-20px, 15px) scale(0.95); opacity: 0.35; }
     }
     .glow-1 {
       fill: url(#glow-grad-1);
       animation: pulse-1 8s ease-in-out infinite;
-      transform-origin: 200px 150px;
+      transform-origin: 200px 75px;
     }
     .glow-2 {
       fill: url(#glow-grad-2);
       animation: pulse-2 10s ease-in-out infinite;
-      transform-origin: 600px 150px;
-    }
-    .card {
-      fill: rgba(15, 23, 42, 0.65);
-      stroke: rgba(255, 255, 255, 0.08);
-      stroke-width: 1.5;
+      transform-origin: 600px 75px;
     }
     .title {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       font-weight: 800;
-      font-size: 42px;
+      font-size: 38px;
       fill: #ffffff;
       letter-spacing: 2px;
       text-shadow: 0 0 10px rgba(255,255,255,0.1);
     }
     .subtitle {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       font-weight: 600;
-      font-size: 16px;
+      font-size: 14px;
       fill: #60a5fa;
-      letter-spacing: 4px;
+      letter-spacing: 3px;
     }
     .badge {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       font-weight: 500;
-      font-size: 11px;
+      font-size: 10px;
       fill: #a78bfa;
       letter-spacing: 1px;
-    }
-    .border-gradient {
-      stroke: url(#border-grad);
-      stroke-width: 1.5;
-      fill: none;
     }
   </style>
 
   <defs>
     <!-- Background Blur Filter -->
     <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="60" />
+      <feGaussianBlur stdDeviation="40" />
     </filter>
     
     <!-- Neon glows -->
     <radialGradient id="glow-grad-1" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.8"/>
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.6"/>
       <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="glow-grad-2" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.8"/>
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.6"/>
       <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
     </radialGradient>
-
-    <!-- Card Border Gradient -->
-    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.4"/>
-      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.1"/>
-      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.4"/>
-    </linearGradient>
   </defs>
 
-  <!-- Background Base -->
-  <rect width="800" height="300" rx="16" class="bg" />
-
-  <!-- Aurora Glows -->
+  <!-- Aurora Glows (softly glowing transparent background) -->
   <g filter="url(#blur)">
-    <circle cx="200" cy="150" r="160" class="glow-1" />
-    <circle cx="600" cy="150" r="180" class="glow-2" />
+    <circle cx="200" cy="75" r="100" class="glow-1" />
+    <circle cx="600" cy="75" r="110" class="glow-2" />
   </g>
-
-  <!-- Glassmorphism Card Overlay -->
-  <rect x="25" y="25" width="750" height="250" rx="12" class="card" />
-  <rect x="25" y="25" width="750" height="250" rx="12" class="border-gradient" />
 
   <!-- Content Group -->
-  <g transform="translate(400, 150)" text-anchor="middle">
+  <g transform="translate(400, 75)" text-anchor="middle">
     <!-- Subtitle Badge -->
-    <rect x="-90" y="-70" width="180" height="24" rx="12" fill="rgba(139, 92, 246, 0.15)" stroke="rgba(139, 92, 246, 0.3)" stroke-width="1" />
-    <text y="-54" class="badge">🚀 AI PRODUCT BUILDER</text>
+    <rect x="-85" y="-55" width="170" height="22" rx="11" fill="rgba(139, 92, 246, 0.12)" stroke="rgba(139, 92, 246, 0.25)" stroke-width="1" />
+    <text y="-40" class="badge">🚀 AI PRODUCT BUILDER</text>
 
     <!-- Title -->
-    <text y="-10" class="title">DURVESH MHATRE</text>
+    <text y="5" class="title">DURVESH MHATRE</text>
 
     <!-- Subtitle -->
-    <text y="36" class="subtitle">BUILDING WITH ANTIGRAVITY • SHIPPING FAST</text>
-    
-    <!-- Accent Line -->
-    <line x1="-120" y1="60" x2="120" y2="60" stroke="url(#border-grad)" stroke-width="2" stroke-linecap="round" />
+    <text y="42" class="subtitle">BUILDING WITH ANTIGRAVITY • SHIPPING FAST</text>
   </g>
-
-  <!-- Floating particles/decorations -->
-  <circle cx="70" cy="70" r="3" fill="#3b82f6" opacity="0.6" />
-  <circle cx="730" cy="220" r="2" fill="#8b5cf6" opacity="0.8" />
-  <circle cx="120" cy="210" r="1.5" fill="#ffffff" opacity="0.5" />
-  <circle cx="680" cy="80" r="2.5" fill="#ec4899" opacity="0.7" />
 </svg>
